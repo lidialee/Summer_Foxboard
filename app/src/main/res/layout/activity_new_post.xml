@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cc.jeongmin.community_poke.ui.NewPostActivity">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbarlayout_newpost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_newpost"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            android:contentInsetEnd="0dp"
+            android:contentInsetLeft="0dp"
+            android:contentInsetRight="0dp"
+            android:contentInsetStart="0dp"
+            app:contentInsetEnd="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetRight="0dp"
+            app:contentInsetStart="0dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/photo_btn_newpost"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/photo48"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="12dp" />
+
+                <TextView
+                    android:id="@+id/titleText_newpost"
+                    android:layout_width="160dp"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="새 글쓰기"
+                    android:textStyle="bold"
+                    android:textSize="22sp" />
+
+                <ImageView
+                    android:id="@+id/finish_button_newpost"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="15dp"
+                    android:src="@drawable/check32" />
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/title_underline_newpost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appbarlayout_newpost">
+
+        <View
+            android:layout_width="160dp"
+            android:layout_height="3dp"
+            android:layout_centerInParent="true"
+            android:background="@color/colorAccent" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/edit_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/file_layout"
+        android:layout_below="@id/title_underline_newpost">
+
+        <EditText
+            android:id="@+id/title_edit_newpost"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/newpost_title"
+            android:hint=" 제목을 입력해주세요"
+            android:maxLength="100"
+            android:textColorHint="@color/colorAccent" />
+
+        <View
+            android:id="@+id/title_Viewline"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/title_edit_newpost"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
+            android:background="@color/colorAccent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/guide_spinner"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
+            android:text="게시물이 올라갈 게시판의 종류를 선택해주세요"
+            android:textSize="12sp"
+            android:layout_below="@+id/title_Viewline"/>
+
+        <Spinner
+            android:id="@+id/spinner_newpost"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/guide_spinner"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/newpost_edit"/>
+
+        <EditText
+            android:id="@+id/body_edit_newpost"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/spinner_newpost"
+            android:layout_above="@+id/imageText"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/newpost_edit"
+            android:gravity="top"
+            android:hint=" 본문을 입력해주세요 "
+            android:inputType="textMultiLine"
+            android:scrollHorizontally="false"
+            android:textColorHint="#c9c9c9"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageText"
+            android:text="첨부 이미지 리스트"
+            android:textSize="16sp"
+            android:textColor="#696969"
+            android:layout_marginBottom="4dp"
+            android:layout_above="@+id/imageRecycler"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"/>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageRecycler"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/newpost_edit"
+            android:layout_alignParentBottom="true" />
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+</RelativeLayout>

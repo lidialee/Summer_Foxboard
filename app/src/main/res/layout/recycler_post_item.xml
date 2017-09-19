@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/background_relative"
+    android:layout_marginEnd="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="5dp"
+    android:background="@drawable/newpost_edit">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:id="@+id/textarea_relative"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Here is TitleArea"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:maxLength="40"
+            android:layout_toLeftOf="@+id/thumnail_img"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:id="@+id/title_textview" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/writer_textview"
+            android:text="writerName"
+            android:textStyle="bold"
+            android:textSize="13sp"
+            android:layout_below="@+id/title_textview"
+            android:layout_alignStart="@+id/title_textview"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/time_textview"
+            android:text="timeStamp"
+            android:textStyle="bold"
+            android:textSize="13sp"
+            android:layout_marginStart="10dp"
+            android:layout_toRightOf="@id/writer_textview"
+            android:layout_below="@+id/title_textview"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/body_textview"
+            android:layout_marginTop="3dp"
+            android:text="body"
+            android:textSize="11sp"
+            android:maxLength="200"
+            android:layout_toLeftOf="@+id/thumnail_img"
+            android:layout_alignStart="@+id/title_textview"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="15dp"
+            android:layout_below="@+id/time_textview"/>
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/thumnail_img"
+            android:visibility="gone"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp" />
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/profile_img_comment"
+        android:src="@drawable/profiledefault"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="5dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/right_relative_comment"
+        android:layout_toRightOf="@+id/profile_img_comment"
+        android:layout_marginStart="8dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/writer_textview_comment"
+            android:text="Riome"
+            android:textColor="#044997"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_marginTop="8dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/time_textview_comment"
+            android:text="2017.08.12 14:00"
+            android:textSize="15sp"
+            android:layout_toRightOf="@+id/writer_textview_comment"
+            android:layout_alignBaseline="@+id/writer_textview_comment"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="5dp"/>
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="25dp"
+            android:id="@+id/remove_comment"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/cancel1"
+            android:layout_above="@+id/divider_view"
+            android:layout_marginBottom="2dp"
+            android:layout_marginEnd="5dp"
+            android:visibility="invisible"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray"
+            android:layout_below="@+id/writer_textview_comment"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="1dp"
+            android:id="@+id/divider_view" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/body_textview_comment"
+            android:layout_below="@+id/writer_textview_comment"
+            android:layout_centerHorizontal="true"
+            android:text="글 잘봤습니다. 앞으로 잘 부탁드려요"
+            android:textSize="17sp"
+            android:layout_marginTop="4dp"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>

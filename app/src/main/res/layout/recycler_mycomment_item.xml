@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="@color/white">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/commentBody_mypage"
+        android:text="comment body"
+        android:maxLines="40"
+        android:textSize="20sp"
+        android:maxLength="30"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/comment_time_mypage"
+        android:textSize="15sp"
+        android:text="2017년 8월 3일 17:40"
+        android:layout_alignStart="@+id/commentBody_mypage"
+        android:layout_below="@+id/commentBody_mypage"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/titletext"
+        android:text="제목 :"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp"
+        android:layout_alignStart="@+id/commentBody_mypage"
+        android:layout_below="@+id/comment_time_mypage" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/commentPost_title"
+        android:text="comment's post' title"
+        android:layout_alignTop="@+id/titletext"
+        android:layout_toEndOf="@+id/titletext"
+        android:layout_below="@+id/comment_time_mypage"
+        android:layout_marginStart="3dp"/>
+
+    <View
+        android:id="@+id/divier"
+        android:background="#c6c6c6"
+        android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

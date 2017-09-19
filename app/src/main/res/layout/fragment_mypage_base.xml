@@ -1,0 +1,58 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cc.jeongmin.community_poke.ui.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:id="@+id/post_count_relative_mypage"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/post_count_mypage"
+            android:text="0"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:textColor="#7c0101"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/post_default_mypage"
+            android:text="개의 게시물이 있습니다."
+            android:textSize="15sp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/post_count_mypage"
+            android:layout_marginStart="5dp"/>
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/divier"
+        android:background="#bfbfbf"
+        android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/post_count_relative_mypage"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recycler_base_mypage"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/divier">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+</RelativeLayout>

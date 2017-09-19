@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "878073799127",
+    "firebase_url": "https://summer-study-foxtail.firebaseio.com",
+    "project_id": "summer-study-foxtail",
+    "storage_bucket": "summer-study-foxtail.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:878073799127:android:13ce0fef4c0b9a92",
+        "android_client_info": {
+          "package_name": "cc.jeongmin.community_poke"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "878073799127-4c5cgsr8ab98vbkj0bhdnebf07slu9lj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0gBMdIQ6urjJlNivGIkTlYiF24CAuDa0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
